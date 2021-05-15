@@ -4,6 +4,7 @@ import './components/transaction_form.dart';
 import './components/transaction_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'components/login.dart';
 import 'models/transaction.dart';
 import 'dart:math';
 
@@ -91,10 +92,18 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).primaryColor,
         title: Text('Despesas Pessoais'),
         actions: [
-          IconButton(
-            icon: Icon(Icons.add),
-            color: Colors.white,
-            onPressed: () => _openTransactionFormModal(context),
+          Hero(
+            tag: 'hero',
+            child: IconButton(
+              icon: Icon(Icons.logout),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login()),
+                );
+              },
+            ),
           )
         ],
       ),

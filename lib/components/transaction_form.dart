@@ -80,9 +80,7 @@ class _TransactionFormState extends State<TransactionForm> {
                     textColor: Theme.of(context).primaryColor,
                     child: Text('Selecionar Data',
                       style: TextStyle(
-                      backgroundColor: Colors.green,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 22
                       ),
                     ),
                     onPressed: _showDatePicker,
