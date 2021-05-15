@@ -92,18 +92,17 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).primaryColor,
         title: Text('Despesas Pessoais'),
         actions: [
-          Hero(
-            tag: 'hero',
-            child: IconButton(
-              icon: Icon(Icons.logout),
-              color: Colors.white,
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Login()),
-                );
-              },
-            ),
+          IconButton(
+            icon: Hero(
+              tag: 'hero',
+                child: Icon(Icons.logout)),
+            color: Colors.white,
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Login()),
+              );
+            },
           )
         ],
       ),
